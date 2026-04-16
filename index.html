@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MC Tickets — Your Ticket Concierge</title>
+  <meta name="description" content="Private ticket concierge for Melbourne's biggest games and events. Medallion Club, corporate suites, hero seats. By referral." />
+  <meta property="og:title" content="MC Tickets — Your Ticket Concierge" />
+  <meta property="og:description" content="The seats everyone wants. Without the scramble. Medallion Club, corporate suites, hero seats, and hospitality in Melbourne." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-stadium.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#top" class="nav-logo" aria-label="MC Tickets">
+      <svg class="monogram-sm" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="50" y="63" text-anchor="middle" class="mono-text">MC</text>
+      </svg>
+      <span class="nav-wordmark">MC Tickets</span>
+    </a>
+    <a href="#request" class="nav-cta">Request Access</a>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="hero-bg"></div>
+    <canvas class="sparkles" id="sparkles" aria-hidden="true"></canvas>
+    <div class="hero-inner fade-in">
+      <div class="monogram-wrap">
+        <svg class="monogram-lg" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="monoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#9B6BFF"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#7B3FF2"/>
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="94" fill="none" stroke="url(#monoGrad)" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+          <text x="100" y="128" text-anchor="middle" class="mono-text-lg">MC</text>
+        </svg>
+      </div>
+      <p class="eyebrow">Est. Melbourne</p>
+      <h1 class="hero-title">Your Ticket<br/><em>Concierge</em></h1>
+      <p class="hero-sub">Medallion Club, corporate suites, hero seats and hospitality. For the people who never want to hear the words <span class="nowrap">"sold out"</span>.</p>
+      <div class="hero-ctas">
+        <a href="#request" class="btn btn-primary">Request Access</a>
+        <a href="#how" class="btn btn-ghost">How it works</a>
+      </div>
+      <div class="hero-meta">
+        <span class="pill"><strong>10+</strong> years trading</span>
+        <span class="pill"><strong>1,000+</strong> members</span>
+        <span class="pill">By referral only</span>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span></div>
+  </header>
+
+  <!-- POSITIONING -->
+  <section class="section positioning fade-in">
+    <p class="section-label">The promise</p>
+    <h2 class="big-quote">
+      The seats everyone wants.<br/>
+      <span class="accent">Without the scramble.</span>
+    </h2>
+    <p class="positioning-body">
+      MC Tickets is a private concierge for Melbourne's biggest games and events. We don't run a store. We run relationships. Send a message to Mark, tell him what you're after, and the answer is almost always yes. Dining included, seats sorted, delivered to your phone before kick-off.
+    </p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section how fade-in">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">Three steps. No friction.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Send a message</h3>
+        <p>Text, WhatsApp, email or call. Tell Mark the game, the date, the seat count and who you're bringing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We curate options</h3>
+        <p>Within hours, you'll have the best available. Medallion Club, corporate boxes, premium dining, the lot. POA, confirmed price before you commit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Delivered and done</h3>
+        <p>Tickets land on your phone. Dining is booked. You walk in, sit down, enjoy the night. No queues, no apps, no stress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section categories fade-in">
+    <p class="section-label">What we get you into</p>
+    <h2 class="section-title">Every seat that matters in Melbourne.</h2>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <h3>AFL</h3>
+        <p>Medallion Club, corporate suites, Level 1 reserve. MCG and Marvel Stadium. Every round, every rivalry, Grand Final.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 9h18M8 5v14"/></svg>
+        </div>
+        <h3>NRL & State of Origin</h3>
+        <p>Origin at the MCG, big finals, Storm home fixtures. Premium seating and hospitality packages.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 9l12-2M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm12-3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+        </div>
+        <h3>Concerts & Tours</h3>
+        <p>Front of stage, VIP, after-parties. International tours, stadium shows, boutique venues. When they're in town, we know a guy.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="16" r="3"/><circle cx="17" cy="16" r="3"/><path d="M7 16V8l5-3 5 3v8M12 5v11"/></svg>
+        </div>
+        <h3>Formula 1</h3>
+        <p>Albert Park Grand Prix. Paddock Club, Champions Club, Formula One Paddock access. Book early, it moves fast.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+        </div>
+        <h3>Australian Open</h3>
+        <p>Rod Laver Arena, Margaret Court, AO Club, night sessions and finals. Full hospitality or single seats.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.39 7.36H22l-6.18 4.49L18.18 21 12 16.51 5.82 21l2.36-7.15L2 9.36h7.61z"/></svg>
+        </div>
+        <h3>International & Premium</h3>
+        <p>Melbourne Cup, Cricket Tests, Boxing Day, rugby Internationals, special one-offs. If it sells out, ask us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE INVENTORY -->
+  <section class="section inventory fade-in">
+    <div class="inv-header">
+      <div>
+        <p class="section-label">Sample inventory</p>
+        <h2 class="section-title">A taste of what crosses Mark's desk.</h2>
+      </div>
+      <p class="inv-note">Indicative only. Real inventory moves daily. Ask for what you want.</p>
+    </div>
+    <div class="inv-grid">
+      <article class="inv-card">
+        <div class="inv-tag">AFL · MCG</div>
+        <h3>Round 1 Blockbuster</h3>
+        <p class="inv-meta">Medallion Club · Level 2 Premium Dining · 4 seats</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+      <article class="inv-card">
+        <div class="inv-tag">AFL · Marvel Stadium</div>
+        <h3>Friday Night Prime Time</h3>
+        <p class="inv-meta">Medallion Club · Coaches Club access · 6 seats</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+      <article class="inv-card">
+        <div class="inv-tag">Concerts · Rod Laver</div>
+        <h3>International Stadium Tour</h3>
+        <p class="inv-meta">Floor A, Row 4 · Pair · Pre-show hospitality</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+      <article class="inv-card">
+        <div class="inv-tag">F1 · Albert Park</div>
+        <h3>Grand Prix Sunday</h3>
+        <p class="inv-meta">Paddock Club · All four days · 2 passes</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+      <article class="inv-card">
+        <div class="inv-tag">Cricket · MCG</div>
+        <h3>Boxing Day Test</h3>
+        <p class="inv-meta">Olympic Room · Full day 1 dining · 8 seats</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+      <article class="inv-card">
+        <div class="inv-tag">Tennis · AO</div>
+        <h3>Night Session Quarter Finals</h3>
+        <p class="inv-meta">Rod Laver · AO Club · 4 tickets with dining</p>
+        <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why fade-in">
+    <p class="section-label">Why MC</p>
+    <h2 class="section-title">Ten years. A thousand members. One phone number.</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">10<span>+</span></div>
+        <p>Years trading in premium Melbourne ticketing. Relationships that don't exist on any public platform.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">1,000<span>+</span></div>
+        <p>Members on the private list. Lawyers, founders, execs, doctors, fans. Mostly referrals. We don't market.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">48<span>hr</span></div>
+        <p>Most last-minute requests filled within two days. Often within two hours.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">0</div>
+        <p>Public prices. Every quote is tailored. Members get the best price because Mark knows what you pay.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUEST FORM -->
+  <section id="request" class="section request fade-in">
+    <div class="request-inner">
+      <p class="section-label">Request access</p>
+      <h2 class="section-title">Tell Mark what you want.</h2>
+      <p class="request-sub">New here? Start with a message. Existing members go straight to WhatsApp.</p>
+
+      <form class="form" id="requestForm" action="mailto:sales@mctickets.com.au" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required placeholder="First and last" />
+          </label>
+          <label>
+            <span>Mobile</span>
+            <input type="tel" name="mobile" required placeholder="04XX XXX XXX" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@company.com.au" />
+          </label>
+          <label>
+            <span>Referred by</span>
+            <input type="text" name="referral" placeholder="Optional" />
+          </label>
+        </div>
+        <label class="full">
+          <span>What are you after?</span>
+          <textarea name="message" rows="4" required placeholder="e.g. 4 seats, Collingwood vs Carlton, Medallion Club, dining preferred"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary btn-full">Send to Mark</button>
+        <p class="form-note">Or email <a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a> directly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="monogram-sm" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <text x="50" y="63" text-anchor="middle" class="mono-text">MC</text>
+        </svg>
+        <div>
+          <p class="foot-word">MC Tickets</p>
+          <p class="foot-tag">Your Ticket Concierge</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="foot-label">Director</p>
+        <p>Mark Faber</p>
+      </div>
+      <div class="footer-col">
+        <p class="foot-label">Enquiries</p>
+        <p><a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="foot-label">Based</p>
+        <p>Melbourne, Australia</p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>© <span id="year"></span> MC Tickets. ABN [TBC]. By referral only.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

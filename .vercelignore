@@ -1,0 +1,5 @@
+.DS_Store
+node_modules
+strategy.md
+README.md
+*.md
