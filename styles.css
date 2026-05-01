@@ -275,7 +275,16 @@ main, nav, header, section, footer { position: relative; z-index: 2; }
 }
 .hero-title em {
   font-style: italic;
-  color: var(--text-base);
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.02em 0.14em 0.22em 0.04em;
+  margin: 0 -0.12em -0.2em 0;
+  /* Same gradient as the MC monogram: purple → gold → purple, 135deg */
+  background: linear-gradient(135deg, #9B6BFF 0%, #D4AF37 50%, #7B3FF2 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 @keyframes shimmer {
   0%, 100% { background-position: 0% 50%; }
