@@ -862,6 +862,176 @@ main, nav, header, section, footer { position: relative; z-index: 2; }
 .form-note a { color: var(--gold-light); border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
 
 /* ============================================
+   FORM SUCCESS / ERROR STATES
+   ============================================ */
+.form-success {
+  text-align: center;
+  padding: 32px 12px;
+}
+.form-success .check {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+.form-success h3 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: var(--text-base);
+}
+.form-success p {
+  color: var(--text-dim);
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.7;
+}
+.form-error {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: rgba(220, 80, 80, 0.08);
+  border: 1px solid rgba(220, 80, 80, 0.3);
+  border-radius: 4px;
+  font-size: 13px;
+  color: #f0c0c0;
+  text-align: center;
+}
+#submitBtn[disabled] { opacity: 0.6; cursor: progress; }
+
+/* ============================================
+   PRIVACY MODAL
+   ============================================ */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+.modal.open {
+  display: flex;
+  opacity: 1;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.modal-card {
+  position: relative;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  max-width: 720px;
+  width: 100%;
+  max-height: 86vh;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.5s var(--ease);
+}
+.modal.open .modal-card { transform: translateY(0) scale(1); }
+.modal-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, var(--purple-light), transparent 40%, var(--gold), transparent 70%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.modal-content {
+  padding: 50px 56px 44px;
+  overflow-y: auto;
+  max-height: 86vh;
+}
+.modal-content h2 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0 0 8px;
+  color: var(--text-base);
+}
+.modal-content h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 28px 0 8px;
+  color: var(--gold-light);
+}
+.modal-content p,
+.modal-content li {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.75;
+}
+.modal-content ul {
+  margin: 8px 0 8px;
+  padding-left: 20px;
+}
+.modal-content li { margin: 4px 0; }
+.modal-content a {
+  color: var(--gold-light);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+.modal-meta {
+  font-size: 12px !important;
+  color: var(--text-mute) !important;
+  letter-spacing: 0.5px;
+  margin: 0 0 24px !important;
+}
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(8, 8, 11, 0.6);
+  color: var(--text-base);
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s var(--ease);
+}
+.modal-close:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+  transform: rotate(90deg);
+}
+body.modal-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .modal-content { padding: 40px 28px 32px; }
+  .modal-content h2 { font-size: 28px; }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {

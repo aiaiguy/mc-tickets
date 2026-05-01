@@ -73,7 +73,7 @@
       <span class="accent">Without the scramble.</span>
     </h2>
     <p class="positioning-body">
-      MC Tickets is a private concierge for Melbourne's biggest games and events. We don't run a store. We run relationships. Send a message to Mark, tell him what you're after, and the answer is almost always yes. Dining included, seats sorted, delivered to your phone before kick-off.
+      MC Tickets is a private concierge for Melbourne's biggest games and events. We don't run a store. We run relationships. Send us a message, tell us what you're after, and the answer is almost always yes. Dining included, seats sorted, delivered to your phone before kick-off.
     </p>
   </section>
 
@@ -85,7 +85,7 @@
       <div class="step">
         <div class="step-num">01</div>
         <h3>Send a message</h3>
-        <p>Text, WhatsApp, email or call. Tell Mark the game, the date, the seat count and who you're bringing.</p>
+        <p>Text, WhatsApp, email or call. Tell us the game, the date, the seat count and who you're bringing.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
@@ -110,7 +110,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
         </div>
         <h3>AFL</h3>
-        <p>Medallion Club, corporate suites, Level 1 reserve. MCG and Marvel Stadium. Every round, every rivalry, Grand Final.</p>
+        <p>Medallion Club, corporate suites, Level 1 reserve. MCG, Marvel Stadium and every venue nationally. Every round, every rivalry, Grand Final.</p>
       </div>
       <div class="cat-card">
         <div class="cat-icon">
@@ -169,12 +169,12 @@
       <article class="inv-card">
         <div class="inv-tag">AFL · Marvel Stadium</div>
         <h3>Friday Night Prime Time</h3>
-        <p class="inv-meta">Medallion Club · Coaches Club access · 6 seats</p>
+        <p class="inv-meta">Medallion Club · All inclusive food &amp; beverage package at the Stoke Grill · 6 seats</p>
         <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
       </article>
       <article class="inv-card">
         <div class="inv-tag">Concerts · Rod Laver</div>
-        <h3>International Stadium Tour</h3>
+        <h3>Ed Sheeran Tour</h3>
         <p class="inv-meta">Floor A, Row 4 · Pair · Pre-show hospitality</p>
         <div class="inv-foot"><span class="price">POA</span><span class="arrow">→</span></div>
       </article>
@@ -206,7 +206,7 @@
     <div class="why-grid">
       <div class="why-item">
         <div class="why-num">10<span>+</span></div>
-        <p>Years trading in premium Melbourne ticketing. Relationships that don't exist on any public platform.</p>
+        <p>Years trading in premium ticketing. Relationships that don't exist on any public platform.</p>
       </div>
       <div class="why-item">
         <div class="why-num">1,000<span>+</span></div>
@@ -227,10 +227,16 @@
   <section id="request" class="section request fade-in">
     <div class="request-inner">
       <p class="section-label">Request access</p>
-      <h2 class="section-title">Tell Mark what you want.</h2>
+      <h2 class="section-title">Tell us what you want.</h2>
       <p class="request-sub">New here? Start with a message. Existing members go straight to WhatsApp.</p>
 
-      <form class="form" id="requestForm" action="mailto:sales@mctickets.com.au" method="post" enctype="text/plain">
+      <form class="form" id="requestForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="MC Tickets — New enquiry" />
+        <input type="hidden" name="from_name" value="MC Tickets Website" />
+        <input type="hidden" name="redirect" value="false" />
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div class="form-row">
           <label>
             <span>Your name</span>
@@ -255,8 +261,11 @@
           <span>What are you after?</span>
           <textarea name="message" rows="4" required placeholder="e.g. 4 seats, Collingwood vs Carlton, Medallion Club, dining preferred"></textarea>
         </label>
-        <button type="submit" class="btn btn-primary btn-full">Send to Mark</button>
-        <p class="form-note">Or email <a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a> directly.</p>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send enquiry</button>
+        <p class="form-note">
+          By submitting, you agree to our <a href="#" data-open-privacy>Privacy Policy</a>.
+          Or email <a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a> directly.
+        </p>
       </form>
     </div>
   </section>
@@ -275,12 +284,12 @@
         </div>
       </div>
       <div class="footer-col">
-        <p class="foot-label">Director</p>
-        <p>Mark Faber</p>
-      </div>
-      <div class="footer-col">
         <p class="foot-label">Enquiries</p>
         <p><a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a></p>
+      </div>
+      <div class="footer-col">
+        <p class="foot-label">Event Day Support</p>
+        <p><a href="tel:+61449972955">0449 972 955</a></p>
       </div>
       <div class="footer-col">
         <p class="foot-label">Based</p>
@@ -288,9 +297,67 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>© <span id="year"></span> MC Tickets. ABN [TBC]. By referral only.</p>
+      <p>© <span id="year"></span> MC Tickets. ABN [TBC]. By referral only. <a href="#" data-open-privacy>Privacy Policy</a></p>
     </div>
   </footer>
+
+  <!-- PRIVACY MODAL -->
+  <div class="modal" id="privacyModal" aria-hidden="true" role="dialog" aria-labelledby="privacyTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <p class="section-label">Privacy</p>
+        <h2 id="privacyTitle">Privacy Policy</h2>
+        <p class="modal-meta">Last updated: <span id="privacyDate"></span></p>
+
+        <h3>Who we are</h3>
+        <p>MC Tickets ("we", "us", "our") provides private ticket concierge services. We are committed to protecting your privacy in accordance with the Australian Privacy Principles (APPs) under the Privacy Act 1988 (Cth).</p>
+
+        <h3>Information we collect</h3>
+        <p>When you contact us through this website or otherwise engage our services, we may collect:</p>
+        <ul>
+          <li>Your name and contact details (email, mobile number)</li>
+          <li>Information about your ticket request (event, dates, seat preferences, party size)</li>
+          <li>Referral source if you provide one</li>
+          <li>Records of communications between you and us</li>
+        </ul>
+
+        <h3>How we use your information</h3>
+        <p>We use your personal information to:</p>
+        <ul>
+          <li>Respond to your enquiry and fulfil your ticket request</li>
+          <li>Communicate with you about bookings, event details and event-day logistics</li>
+          <li>Notify you of upcoming inventory that matches your interests, where you have opted in</li>
+          <li>Maintain accurate records of our member base</li>
+          <li>Comply with our legal and regulatory obligations</li>
+        </ul>
+
+        <h3>Disclosure</h3>
+        <p>We do not sell or rent your personal information. We may share limited information with:</p>
+        <ul>
+          <li>Venue partners and ticket vendors strictly to fulfil your booking</li>
+          <li>Service providers who help us operate (such as email and form-handling platforms), under confidentiality obligations</li>
+          <li>Law enforcement, regulators or courts where required by law</li>
+        </ul>
+
+        <h3>Storage and security</h3>
+        <p>Your information is stored securely. We use reasonable technical and organisational measures to protect it from unauthorised access, loss, misuse or disclosure. We retain your information only for as long as necessary to provide our services and meet legal obligations.</p>
+
+        <h3>Access, correction and deletion</h3>
+        <p>You have the right to access the personal information we hold about you, request correction, or request deletion. Email <a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a> and we will respond within a reasonable time.</p>
+
+        <h3>Cookies</h3>
+        <p>This website uses minimal cookies for essential functionality only. We do not use third-party advertising trackers.</p>
+
+        <h3>Complaints</h3>
+        <p>If you have a privacy concern, contact us first at <a href="mailto:sales@mctickets.com.au">sales@mctickets.com.au</a>. If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>.</p>
+
+        <h3>Updates</h3>
+        <p>We may update this policy from time to time. The latest version will always be available on this page.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="script.js"></script>

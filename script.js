@@ -125,6 +125,103 @@ document.querySelectorAll('.btn-primary').forEach((btn) => {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Privacy modal date
+const privacyDateEl = document.getElementById('privacyDate');
+if (privacyDateEl) {
+  privacyDateEl.textContent = new Date().toLocaleDateString('en-AU', {
+    day: 'numeric', month: 'long', year: 'numeric',
+  });
+}
+
+// =============================================
+// Privacy modal
+// =============================================
+(function initModal() {
+  const modal = document.getElementById('privacyModal');
+  if (!modal) return;
+  const open = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    if (lenis) lenis.stop();
+  };
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lenis) lenis.start();
+  };
+  document.querySelectorAll('[data-open-privacy]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+    });
+  });
+  modal.querySelectorAll('[data-close-modal]').forEach((el) => {
+    el.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) close();
+  });
+})();
+
+// =============================================
+// Web3Forms AJAX submit with inline success
+// =============================================
+(function initForm() {
+  const form = document.getElementById('requestForm');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('#submitBtn');
+    const existingError = form.querySelector('.form-error');
+    if (existingError) existingError.remove();
+
+    const accessKey = form.querySelector('input[name="access_key"]').value;
+    if (!accessKey || accessKey.startsWith('REPLACE_')) {
+      const err = document.createElement('div');
+      err.className = 'form-error';
+      err.textContent = 'Form not yet configured. Please email sales@mctickets.com.au directly.';
+      form.appendChild(err);
+      return;
+    }
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success !== false) {
+        form.innerHTML = `
+          <div class="form-success">
+            <div class="check" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12l5 5 9-11"/>
+              </svg>
+            </div>
+            <h3>Message received.</h3>
+            <p>Thanks for reaching out. We'll be in touch within 24 hours.</p>
+          </div>`;
+      } else {
+        throw new Error(json.message || 'Submit failed');
+      }
+    } catch (err) {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+      const errEl = document.createElement('div');
+      errEl.className = 'form-error';
+      errEl.textContent = 'Something went wrong. Please email sales@mctickets.com.au directly.';
+      form.appendChild(errEl);
+    }
+  });
+})();
+
 // Smooth scroll for in-page anchors (routed through Lenis when available)
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
