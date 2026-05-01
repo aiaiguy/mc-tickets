@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mctickets.com.au/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/hero-stadium.jpg</image:loc>
+      <image:caption>The Melbourne Cricket Ground at night, lit up under floodlights</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-afl.jpg</image:loc>
+      <image:caption>AFL Grand Final crowd at the MCG</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-nrl.jpg</image:loc>
+      <image:caption>State of Origin under lights at the MCG</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-concert.jpg</image:loc>
+      <image:caption>Stadium concert with full house</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-f1.jpg</image:loc>
+      <image:caption>Formula 1 at Albert Park</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-tennis.jpg</image:loc>
+      <image:caption>Australian Open at Rod Laver Arena</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mctickets.com.au/assets/cat-cricket.jpg</image:loc>
+      <image:caption>Boxing Day Test panorama at the MCG</image:caption>
+    </image:image>
+  </url>
+</urlset>
